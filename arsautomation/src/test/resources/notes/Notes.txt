@@ -1,0 +1,84 @@
+==============MVN======================
+mvn clean  //Cleans the folder
+mvn compile    // maven compiles the project/build
+mvn spring-boot:run -Dport=9090 //run the app on 9090 port
+
+groupid and artifact id needs to be changed while createing the projet:
+
+
+mvn archetype:generate -DgroupId=com.sumdev.tax.ars -DartifactId=arsautomation -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false // create project
+
+
+
+
+
+
+================DB==============
+
+
+
+===============Syllabus============
+
+UML: Class diagram, Objects, Class, Class diagram, sequence diagram, entity diagram,forward engineering (generate java code from UML Diagram)
+Core Java: Classes, methods, constructor, collection
+GIT / GitKraken: Repository creation, stage, commit, clone, push, gitignore
+Advance Java: JDBC
+Selenium: https://kindlespark.wiki.zoho.com/selenium.html
+Tools: Maven, Eclipse, DB Visulizer, console, explorer ++, GITKraken
+SOAPUI:  GUI, Automation
+REST = HTTP  methods+ HTTP Error Codes + JSON 
+Maven: mvn compile, clean, create empty project / template, eclipse:elciplse, goals (commands), Package
+testng:unit test framework:
+junit: unit test framework:
+XML: XML,xml schema (table structure/class/xsd), xpath (where clause),
+Data Generation:fakedata genration
+CSV: 
+========================================================================================
+Json:
+
+=============================================XML========================================
+root
+element ,/tag /node,: -> synonoms
+Parent and child elements:
+(entity_number,capital_amount,name,Share_count) values ('EN11002',1002,'N-1002',102);
+
+<Name>Kindlespark</Name>
+<ShareCount>1002</ShareCount>
+===================================OOPs======================================
+Class/Type/table/Blue print/structure/Entity/parvat 
+Object/row/himalya/instance/
+Atributes/Properties/fields/column/noun
+Behaviour/methods/functions/opertations/stoed proced(SP)/verb
+
+Byke: color, #of wheels, RTO #
+behaviour:start,stop,break, excellerate,
+
+Student:
+
+SuperClass/Parent/type/supertype/Baseclass
+
+Super/Parent/base
+Derived/child/sub
+
+entity_number,capital_amount,name,Share_count
+
+Input Parameters are equivalent to values given in the Insert statement (fields and values)
+where clause = input parameter
+
+return type = Display
+Select count(*) from legal_entity;
+
+public int findLegalEntityCount()
+{
+rerurn int
+}
+
+
+================================================
+
+
+
+
+
+
+
