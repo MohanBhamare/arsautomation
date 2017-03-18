@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LegalEntityList>
+<LegalEntity>
+	<EntityNumber>K34612</EntityNumber>
+	<CapitalAmount>4612</CapitalAmount>
+	<Name>MICHAEL'S MOTOR CARS, INC.</Name>
+	<ShareCount>612</ShareCount>
+</LegalEntity>
+<LegalEntity>
+	<EntityNumber>B94000000432</EntityNumber>
+	<CapitalAmount>0432</CapitalAmount>
+	<Name>HALL 1982 MANAGEMENT ASSOCIATES LIMITED</Name>
+	<ShareCount>32</ShareCount>
+</LegalEntity>
+<LegalEntity>
+	<EntityNumber>L13000157624</EntityNumber>
+	<CapitalAmount>57624</CapitalAmount>
+	<Name>	PHOENIX OF RIVIERA BEACH LLC</Name>
+	<ShareCount>7624</ShareCount>
+</LegalEntity>
+<LegalEntity>
+	<EntityNumber>L12000136993</EntityNumber>
+	<CapitalAmount>36993</CapitalAmount>
+	<Name>GARCORP HOLDINGS, LLC</Name>
+	<ShareCount>993</ShareCount>
+</LegalEntity>
+</LegalEntityList>
