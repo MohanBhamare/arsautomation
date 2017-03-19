@@ -6,6 +6,10 @@ mvn spring-boot:run -Dport=9090 //run the app on 9090 port
 groupid and artifact id needs to be changed while createing the projet:
 
 mvn archetype:generate -DgroupId=com.sumdev.tax.ars -DartifactId=arsautomation -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false // create project
+// create project
+mvn archetype:generate -DgroupId=com.learnbybyte.lab -DartifactId=labexercise -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false 
+
+
 ===========
 mvn test //Mvn executes unit OR integration tests
 mvn package -DskipTests  //Mvn Ignore execution of unit OR integration tests
@@ -27,7 +31,6 @@ mvn eclipse:eclipse
 ================DB==============
 
 
-
 ===============Syllabus============
 
 UML: Class diagram, Objects, Class, Class diagram, sequence diagram, entity diagram,forward engineering (generate java code from UML Diagram)
@@ -47,6 +50,7 @@ CSV:
 BDD
 PAGE OBJECT MODEL
 eclipse: debuging
+Gradle?
 ========================================================================================
 Json:
 
@@ -72,10 +76,13 @@ Doctor is Parent class of Gynac and ENT child class
 Dcotor is Generalizeion of Gynac and ENT
 Dcotor us Generalizetion of Gynac and ENT
 Gynac and ENT are specilization of Doctor
+In Java Gynac class is extends from Doctor Class
+
 
 IS releationship
 smelltest: Is Engineering student a student?
 Is tailor a proffession?
+
 
 
 Byke: color, #of wheels, RTO #
