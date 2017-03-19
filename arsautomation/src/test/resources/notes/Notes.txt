@@ -46,6 +46,7 @@ Data Generation:fakedata genration
 CSV: 
 BDD
 PAGE OBJECT MODEL
+eclipse: debuging
 ========================================================================================
 Json:
 
@@ -62,6 +63,20 @@ Class/Type/table/Blue print/structure/Entity/parvat
 Object/row/himalya/instance/
 Atributes/Properties/fields/column/noun
 Behaviour/methods/functions/opertations/stoed proced(SP)/verb/action
+Inheritance/Classification/speicilization/
+
+
+Doctor is SuperClass of Gynac and ENT doctor classes 
+Doctor is supertype of Gynac and ENT doctor type
+Doctor is Parent class of Gynac and ENT child class
+Dcotor is Generalizeion of Gynac and ENT
+Dcotor us Generalizetion of Gynac and ENT
+Gynac and ENT are specilization of Doctor
+
+IS releationship
+smelltest: Is Engineering student a student?
+Is tailor a proffession?
+
 
 Byke: color, #of wheels, RTO #
 behaviour:start,stop,break, excellerate,
