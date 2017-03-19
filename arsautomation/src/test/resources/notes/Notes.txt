@@ -58,7 +58,7 @@ Json:
 root
 element ,/tag /node,: -> synonoms
 Parent and child elements:
-(entity_number,capital_amount,name,Share_count) values ('EN11002',1002,'N-1002',102);
+(entity_number,capital_amount,name,Share_count) values ('EN11002',1002,'N-1002',102)
 
 <Name>Kindlespark</Name>
 <ShareCount>1002</ShareCount>
@@ -79,6 +79,8 @@ Gynac and ENT are specilization of Doctor
 In Java Gynac class is extends from Doctor Class
 
 
+
+
 IS releationship
 smelltest: Is Engineering student a student?
 Is tailor a proffession?
@@ -94,6 +96,12 @@ SuperClass/Parent/type/supertype/Baseclass
 
 Super/Parent/base
 Derived/child/sub
+
+Interface are a contract/agreement
+Interface declairs capabilities
+
+
+
 
 entity_number,capital_amount,name,Share_count
 
