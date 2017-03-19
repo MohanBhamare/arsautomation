@@ -5,8 +5,19 @@ mvn spring-boot:run -Dport=9090 //run the app on 9090 port
 
 groupid and artifact id needs to be changed while createing the projet:
 
-
 mvn archetype:generate -DgroupId=com.sumdev.tax.ars -DartifactId=arsautomation -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false // create project
+===========
+mvn test //Mvn executes unit OR integration tests
+mvn package -DskipTests  //Mvn Ignore execution of unit OR integration tests
+mvn package -Dmaven.test.skip //Mvn Ignore execution of unit OR integration tests
+mvn package // build web apps
+mvn install  //deploy project
+mvn deploy //deploy project
+mvn javadoc:javadoc //Generate java documentation
+mvn -X //Debug maven
+mvn site //Geneate site
+mvn --version //Identify version # of maven
+mvn eclipse:eclipse
 
 
 
@@ -33,6 +44,8 @@ junit: unit test framework:
 XML: XML,xml schema (table structure/class/xsd), xpath (where clause),
 Data Generation:fakedata genration
 CSV: 
+BDD
+PAGE OBJECT MODEL
 ========================================================================================
 Json:
 
@@ -48,7 +61,7 @@ Parent and child elements:
 Class/Type/table/Blue print/structure/Entity/parvat 
 Object/row/himalya/instance/
 Atributes/Properties/fields/column/noun
-Behaviour/methods/functions/opertations/stoed proced(SP)/verb
+Behaviour/methods/functions/opertations/stoed proced(SP)/verb/action
 
 Byke: color, #of wheels, RTO #
 behaviour:start,stop,break, excellerate,
@@ -76,6 +89,7 @@ rerurn int
 
 ================================================
 
+balance +=amount;
 
 
 
