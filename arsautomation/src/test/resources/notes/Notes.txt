@@ -28,7 +28,46 @@ mvn eclipse:eclipse
 
 
 
-================DB==============
+================JDBC==============
+Java Database Connectivity (JDBC): 
+
+In order to connect to db
+a) We have mentioned the Driver (Oracle thin)
+b) ServerHost = Localhost:
+c) ServerPort = Port (1521)
+d) service = XE 
+e) User id (credentials): arsadmin
+ f) password: arsadmin
+ 
+database url: jdbc:oracle:thin:@localhost:1521/XE
+
+2) Open SQL commandar:
+3) write Insert query: insert into legal_entity (entity_number,capital_amount,name,Share_count) values ('EN11002',1002,'N-1002',102);
+4) execute insert query
+-----------------------------
+Java :
+1. Add oracle driver dependancy in POM.xml 
+2. run mvn eclipse:eclipse command, so that elcipse class path is modified and JDBC Driver is added to class path
+3. declair 5 attributes/fields: drivername,URL,userid ,Password , connection
+4. Load the driver class using class.forname (Class.forName(driverName).newInstance();)
+5. Use driver manager to get the database connection (connection = DriverManager.getConnection(arsDBURL, userName, password);)
+This creates db connection in memeory 
+
+6. Create statement Object (Statement stmt = connection.createStatement();)
+   This step is similar to opening 'sql commander' in db visulizer.
+7. Write insert query (insert into legal_entity (entity_number,capital_amount,name,Share_count) values ('EN11021',1021,'N-1021',1021);)
+8. Execute the Insert Query (stmt.executeQuery(selectQuery);
+
+
+
+  
+
+
+
+pom.xml
+
+
+
 
 
 ===============Syllabus============
