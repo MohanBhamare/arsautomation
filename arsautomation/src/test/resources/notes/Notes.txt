@@ -108,7 +108,17 @@ wd.findBy()
 
 
 LegalEntityRepository lerepo = new LegalEnitityRepository() ->incorrect (for example)
-LegalEntityRepository lerepo = new LegalEnititySybaseRepository() ->correct (for example)
+
+
+--------------------------
+ILegalEntityRepository lerepo = new LegalEnititySybaseRepository() ->correct (for example)
+lerepo.insert()
+lerepo.delete()
+lerepo.update
+------------------------
+Usage of Factory:
+------------------
+ILegalEntityRepository lerepo = LegalEnitityRepositoryFactory.getLegalEntityRepository() ->correct (for example)
 lerepo.insert()
 lerepo.delete()
 lerepo.update
