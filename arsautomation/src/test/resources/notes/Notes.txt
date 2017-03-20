@@ -100,6 +100,19 @@ Derived/child/sub
 Interface are a contract/agreement
 Interface declairs capabilities
 
+WebDriver wd = new WebDriver() -> Wrong, it will not compile
+WebDriver wd = new ChromWebDriver() -> Correct
+
+wd.get()
+wd.findBy()
+
+
+LegalEntityRepository lerepo = new LegalEnitityRepository() ->incorrect (for example)
+LegalEntityRepository lerepo = new LegalEnititySybaseRepository() ->correct (for example)
+lerepo.insert()
+lerepo.delete()
+lerepo.update
+
 
 
 
