@@ -1,6 +1,7 @@
 package com.sumdev.tax.ars.auto.test;
 import com.sumdev.tax.ars.arsauto.vo.LegalEntity;
-
+import com.sumdev.tax.ars.arsauto.repo.ILegalEntityRepository;
+import com.sumdev.tax.ars.arsauto.repo.LegalEntityOracleRepository;
 
 public class RegistrationOffice {
 
@@ -8,7 +9,7 @@ public class RegistrationOffice {
 		// TODO Auto-generated method stub
          System.out.println("RegistrationOffice|Main");
          System.out.println("RegistrationOffice|Main|args|"+args);
-
+/*
          LegalEntity le1 = null;
          le1 = new LegalEntity("K34612") ;  
         
@@ -24,8 +25,12 @@ public class RegistrationOffice {
          LegalEntity le3 = null;
          le3 = new LegalEntity("L13000157624") ;  
          le3.register(300);
-         System.out.println("RegistrationOffice|Main|le3|"+le3);
+         System.out.println("RegistrationOffice|Main|le3|"+le3);*/
+        
+         ILegalEntityRepository lerepo = new LegalEntityOracleRepository();
+         lerepo.open();
          
+        
          
          
 	}	
