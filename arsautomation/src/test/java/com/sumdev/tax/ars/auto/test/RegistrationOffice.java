@@ -1,5 +1,5 @@
-package com.sumdev.tax.ars.arsautomation;
-import com.sumdev.tax.ars.arsautomation.vo.LegalEntity;
+package com.sumdev.tax.ars.auto.test;
+import com.sumdev.tax.ars.arsauto.vo.LegalEntity;
 
 
 public class RegistrationOffice {

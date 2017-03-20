@@ -1,4 +1,4 @@
-package com.sumdev.tax.ars.arsautomation.vo;
+package com.sumdev.tax.ars.arsauto.vo;
 
 public class LegalEntity {
 
