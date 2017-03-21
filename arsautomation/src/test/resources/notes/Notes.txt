@@ -118,8 +118,11 @@ TC01:
 	9d. ShareCount:  32
 
 10. System should show Confirmation Message " "
-11. Connect to DB and execute following select query
-    "select entity_number,capital_amount,name,Share_count from legal_entity where Entity_number='EN1032';
+11. Connect to DB, using DB credentials and Open SQL Commander and execute following select query
+    11.1: Connect DB using ARSDB credentials & DB URL
+    11.2: Open SQL Commander
+    11.3: Write SQL query as -> "select entity_number,capital_amount,name,Share_count from legal_entity where Entity_number='EN1032';
+    11.4: Execute above query
 12. Observe and note the result returned by the above sql query.
 	12.1 Observed EntityNumber: EN1032
 	12.2 Observed CapitalAmount: 1032
