@@ -7,15 +7,15 @@ public class RegistrationOffice {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-         System.out.println("RegistrationOffice|Main");
+         System.out.println("RegistrationOffice|Main|v0.1");
          System.out.println("RegistrationOffice|Main|args|"+args);
-/*
+
          LegalEntity le1 = null;
          le1 = new LegalEntity("K34612") ;  
         
          System.out.println("RegistrationOffice|Main|le1|"+le1);
          le1.register(100);
-        
+         /*       
          
          LegalEntity le2 = null;
          le2 = new LegalEntity("B94000000432") ;  
@@ -29,8 +29,8 @@ public class RegistrationOffice {
         
          ILegalEntityRepository lerepo = new LegalEntityOracleRepository();
          lerepo.open();
-         
-        
+         lerepo.insert(le1);
+              
          
          
 	}	

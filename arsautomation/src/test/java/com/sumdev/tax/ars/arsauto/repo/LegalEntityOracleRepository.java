@@ -11,15 +11,15 @@ import java.sql.Statement;
 public class LegalEntityOracleRepository implements ILegalEntityRepository {
 
 	String DBURL = "JDBC:Oracle:thin:@Localhost:1521/xe";
-	String drivername = "Oracle.Jdbc.driver.OracleDriver";
+	String drivername = "oracle.jdbc.driver.OracleDriver";
 	String username="arsadmin";
 	String password="arsadmin";
 	Connection conn = null;
 	
 	
 	//@Override
-	
-	public void openRepository(){
+	public void open(){
+		System.out.println("LegalEntityOracleRepositor|openRepository|b4 try");
 		try{
 			System.out.println("LegalEntityOracleRepositor|openRepository");
 			Class.forName(drivername).newInstance();
@@ -32,14 +32,25 @@ public class LegalEntityOracleRepository implements ILegalEntityRepository {
 		}
 	}
 	
-	public void open() {
-		// TODO Auto-generated method stub
-
-	}
-
+	
+	
+	
 	public void insert(LegalEntity le) {
 		// TODO Auto-generated method stub
-
+		System.out.println("LegalEntityOracleRepositor|Insert");
+		try {
+			Statement st = conn.createStatement();
+			String insertQuery = "insert into legal_entity (entity_number,capital_amount,name,Share_count) values ('EN11023',1023,'N-1023',1023)";
+	        st.executeQuery(insertQuery);
+	        	    
+	        System.out.println("LegalEntityOracleRepositor|Insert|sucessfully");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+				
+		
 	}
 
 	public void close() {
@@ -47,4 +58,7 @@ public class LegalEntityOracleRepository implements ILegalEntityRepository {
 
 	}
 
+	
+	
+	
 }
