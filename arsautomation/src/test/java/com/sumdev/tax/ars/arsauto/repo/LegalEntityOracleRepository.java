@@ -38,10 +38,24 @@ public class LegalEntityOracleRepository implements ILegalEntityRepository {
 	public void insert(LegalEntity le) {
 		// TODO Auto-generated method stub
 		System.out.println("LegalEntityOracleRepositor|Insert");
+		System.out.println("LegalEntityOracleRepositor|Insert|le|"+le);
+		System.out.println("LegalEntityOracleRepositor|Insert|le|entityNumber|"+le.getEntityNumber());
+		System.out.println("LegalEntityOracleRepositor|Insert|le|name|"+le.getName());
+		System.out.println("LegalEntityOracleRepositor|Insert|le|CapitalAmount|"+le.getCapitalAmount());
+		System.out.println("LegalEntityOracleRepositor|Insert|le|ShareCount|"+le.getShareCount());
+		
+		
 		try {
 			Statement st = conn.createStatement();
-			String insertQuery = "insert into legal_entity (entity_number,capital_amount,name,Share_count) values ('EN11023',1023,'N-1023',1023)";
-	        st.executeQuery(insertQuery);
+			String insertQuery = "insert into legal_entity (entity_number,capital_amount,name,Share_count ) "
+								 + " values ( "
+			                     + " '" + le.getEntityNumber()    + "'," 
+								 + "  " + le.getCapitalAmount()   + " ," 
+			                     + " '" + le.getName() 			  + "',"
+								 + "  " + le.getShareCount()      + " )";
+	  		     
+			System.out.println("LegalEntityOracleRepositor|insert|insertQuery|"+ insertQuery);
+			//st.executeQuery(insertQuery);
 	        	    
 	        System.out.println("LegalEntityOracleRepositor|Insert|sucessfully");
 		} catch (SQLException e) {
@@ -56,6 +70,55 @@ public class LegalEntityOracleRepository implements ILegalEntityRepository {
 	public void close() {
 		// TODO Auto-generated method stub
 
+	}
+
+
+
+
+	public LegalEntity findByID(String tmpEntityId) {
+		// TODO Auto-generated method stub
+		System.out.println("LegalEntityOracleRepositor|");
+		System.out.println("LegalEntityOracleRepositor|findByID|");
+		System.out.println("LegalEntityOracleRepositor|findByID|tmpEntityID|"+tmpEntityId);
+		
+		LegalEntity tmpLegalEntity= null;
+		
+		try {
+			Statement st = conn.createStatement();
+			String selectQuery = "select entity_number,capital_amount,name,Share_count from legal_entity where Entity_number='EN11027'";
+			System.out.println("LegalEntityOracleRepositor|findByID|selectQuery|"+selectQuery);
+			
+			ResultSet rs = st.executeQuery(selectQuery);
+			System.out.println("LegalEntityOracleRepositor|findByID|ResultSet|"+rs);
+		
+			String tmpEntityNumber = "";
+			String tmpLegalEntityName = "";
+			int tmpCapitalAmount=0 ;
+			int tmpShareCount=0;
+			
+			if (rs.next())
+			{
+				tmpEntityNumber    = rs.getString("entity_number");
+				tmpCapitalAmount   = rs.getInt("capital_amount");
+				tmpLegalEntityName = rs.getString("name");
+				tmpShareCount      = rs.getInt("Share_count");
+			}
+			System.out.println("LegalEntityOracleRepositor|findByID|ResultSet|EntityNumber|"
+			+tmpEntityNumber+"|Capital Amount|"+tmpCapitalAmount +"|LegalEntityName|"
+			+tmpLegalEntityName+"|Share Count|"+tmpShareCount);
+					
+			
+			tmpLegalEntity = new LegalEntity(tmpEntityNumber, tmpLegalEntityName, tmpCapitalAmount, tmpShareCount);
+			
+			
+			rs.close();
+			st.close();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return tmpLegalEntity;
 	}
 
 	

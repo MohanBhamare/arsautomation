@@ -94,7 +94,21 @@ CUCUMBER?
 ========================================================================================
 Json:
 
+==============================================Collections=======================================
+
+Array
+Array List
+Generics
+Maps:
+
+
+
+=============================================================================================
+
+
 =============================================XML========================================
+
+
 root
 element ,/tag /node,: -> synonoms
 Parent and child elements:
@@ -108,7 +122,7 @@ Object/row/himalya/instance/
 Atributes/Properties/fields/column/noun
 Behaviour/methods/functions/opertations/stoed proced(SP)/verb/action
 Inheritance/Classification/speicilization/
-
+Method Parameters/method arugments/parameters/arguments
 
 Doctor is SuperClass of Gynac and ENT doctor classes 
 Doctor is supertype of Gynac and ENT doctor type
@@ -148,7 +162,7 @@ wd.findBy()
 
 
 LegalEntityRepository lerepo = new LegalEnitityRepository() ->incorrect (for example)
-
+LegalEntityArrayRepository class implements ILegalEntityRepository interface/contract
 
 --------------------------
 ILegalEntityRepository lerepo = new LegalEnititySybaseRepository() ->correct (for example)

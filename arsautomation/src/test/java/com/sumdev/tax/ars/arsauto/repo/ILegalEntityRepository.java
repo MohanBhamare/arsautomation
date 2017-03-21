@@ -7,6 +7,9 @@ public void open();
 
 public void insert(LegalEntity le);
 
+public LegalEntity findByID(String tmpEntityId);
+
+
 public void close();
 
 	

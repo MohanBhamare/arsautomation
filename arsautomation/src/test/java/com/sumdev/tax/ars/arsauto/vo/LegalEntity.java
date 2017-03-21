@@ -7,21 +7,40 @@ public class LegalEntity {
 	private String name = null;
 	private int shareCount = 0;
 
-	public LegalEntity(String tempEntityNumber) {
+	public LegalEntity(String tempEntityNumber, String tempName,int tempCapitalAmount, int tempShareCount) {
 		System.out.println("LegalEntity|LegalEntity");
 		System.out.println("LegalEntity|LegalEntity|tempEntityNumber|"+tempEntityNumber);		
-	
+		
+		System.out.println("LegalEntity|LegalEntity|tempCapitalAmount|"+tempCapitalAmount);	
+		System.out.println("LegalEntity|LegalEntity|tempName|"+tempName);	
+		System.out.println("LegalEntity|LegalEntity|tempShareCount|"+tempShareCount);		
+		
 		this.entityNumber=tempEntityNumber;
-		
-	}
-	public void register(double fees){
-		
-		System.out.println("LegalEntity|register|");
-		System.out.println("LegalEntity|register|fees|"+fees);
-		System.out.println("LegalEntity|register|this.entityNumber|"+this.entityNumber);
+		this.name = tempName;
+		this.capitalAmount=tempCapitalAmount;
+		this.shareCount = tempShareCount;
+			
 		
 	}
 	
+	public String getEntityNumber(){
+		
+		return this.entityNumber;
+		
+	}
 	
+	public String getName(){
+		return this.name;
+		
+	}
+	
+	public int getCapitalAmount(){
+		return this.capitalAmount;
+		
+	}
+	public int getShareCount(){
+		return this.shareCount;
+		
+	}
 
 }
