@@ -23,11 +23,6 @@ mvn site //Geneate site
 mvn --version //Identify version # of maven
 mvn eclipse:eclipse
 
-
-
-
-
-
 ================JDBC==============
 Java Database Connectivity (JDBC): 
 
@@ -73,7 +68,8 @@ pom.xml
 ===============Syllabus============
 
 UML: Class diagram, Objects, Class, Class diagram, sequence diagram, entity diagram,forward engineering (generate java code from UML Diagram)
-Core Java: Classes, methods, constructor, collection
+
+Core Java: Classes, methods, constructor, collection:(array), ArrayList, Generics,HashMap, HashTable.
 GIT / GitKraken: Repository creation, stage, commit, clone, push, gitignore
 Advance Java: JDBC
 Selenium: https://kindlespark.wiki.zoho.com/selenium.html
@@ -87,7 +83,7 @@ XML: XML,xml schema (table structure/class/xsd), xpath (where clause),
 Data Generation:fakedata genration
 CSV: 
 BDD
-PAGE OBJECT MODEL
+PAGE OBJECT MODEL: Manual testing: 
 eclipse: debuging
 Gradle?
 CUCUMBER?
@@ -104,7 +100,41 @@ Maps:
 
 
 =============================================================================================
+============================================ManualTesting======================================
+Insert Legal entity:
+TC01: 
+1. Go To ARS admin Page (URL: http://localhost:9090/admin)
+2. System will redirect user to login Page
+3. Provide ARS Loing credenitials (Username : admin , Password:admin) and Click on 'Log Me In' button
+4. System will allow user to login to the system, will show dashboard page.
+5. Click on 'LegalEntities' Link
+6. System will navigate user to 'LegalEntities' List page
+7. User Clicks on 'Crete New' button/Link
+8. System will navigate user to 'Create LegalEntity' Page
+9. Provide following information for Legal Entity and Click on 'Save' Button
+	9a. EntityNumber:EN1032
+	9b. CapitalAmount: 1032
+	9c. Name: N-1032
+	9d. ShareCount:  32
 
+10. System should show Confirmation Message " "
+11. Connect to DB and execute following select query
+    "select entity_number,capital_amount,name,Share_count from legal_entity where Entity_number='EN1032';
+12. Observe and note the result returned by the above sql query.
+	12.1 Observed EntityNumber: EN1032
+	12.2 Observed CapitalAmount: 1032
+	12.3 Observed Name: N-1032
+	12.4 Observed ShareCount: 32
+13. Compare observed LegalEntity information against Expected LegalEntity Information
+       13.1  Compare Expected EntityNumber against observed EntityNumber
+       13.2  Compare Expected CapitalAmount against observed CapitalAmount
+       13.3  Compare Expected Name against observed Name
+       13.4  Compare Expected ShareCount against observed ShareCount
+14. Mark the test case as pass if comparision in step # 13 is sucessfull.
+15. Click on 'Logout'
+16. Close the browser.
+
+=========================================================================================
 
 =============================================XML========================================
 
