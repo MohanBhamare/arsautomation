@@ -68,6 +68,7 @@ pom.xml
 ===============Syllabus============
 
 UML: Class diagram, Objects, Class, Class diagram, sequence diagram, entity diagram,forward engineering (generate java code from UML Diagram)
+     
 
 Core Java: Classes, methods, constructor, collection:(array), ArrayList, Generics,HashMap, HashTable.
 GIT / GitKraken: Repository creation, stage, commit, clone, push, gitignore
