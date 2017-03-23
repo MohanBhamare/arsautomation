@@ -20,12 +20,21 @@ public class RegistrationOffice {
          le2 = new LegalEntity("EN11027","N-1027",11027,1027) ;  
          System.out.println("RegistrationOffice|Main|le2|"+le2);
          
+         LegalEntity le3 = null; 
+         le3 = new LegalEntity("EN1041");
+         le3.setEntityName("name-1041");
+         System.out.println("RegistrationOffice|Main|le3|EntityNumber|"+ le3.getEntityNumber());
+        System.out.println("RegistrationOffice|Main|le3|Name|"+le3.getName());
          
-              
+         LegalEntity le4=null;
+         le4 = new LegalEntity("EN1042");
+         le4.setEntityName("name-1042");
+         System.out.println("RegistrationOffice|Main|le4|EntityNumber|"+ le4.getEntityNumber());
+         System.out.println("RegistrationOffice|Main|le4|Name|"+le4.getName());
+            
+         /*
          ILegalEntityRepository lerepo = new LegalEntityOracleRepository();
          //ILegalEntityRepository lerepo = new LegalEnitityArrayRepository();
-         
-         
          
          lerepo.open();
          
@@ -38,7 +47,7 @@ public class RegistrationOffice {
          System.out.println("RegistrationOffice|Main|foundEntity|Name|"+foundEntity.getName());
          
          
-  
+  */
          
 	}	
 

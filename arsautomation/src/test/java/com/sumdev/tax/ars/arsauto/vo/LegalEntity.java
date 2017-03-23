@@ -4,9 +4,16 @@ public class LegalEntity {
 
 	private String entityNumber = null;
 	private int capitalAmount = 0;
-	private String name = null;
+	private String name = "UNKNOWN";
 	private int shareCount = 0;
 
+	public LegalEntity(String tempEntityNumber) {
+		System.out.println("LegalEntity|LegalEntity|no argument consturctor|");	
+		this.entityNumber = tempEntityNumber;
+		
+	};
+	
+	
 	public LegalEntity(String tempEntityNumber, String tempName,int tempCapitalAmount, int tempShareCount) {
 		System.out.println("LegalEntity|LegalEntity");
 		System.out.println("LegalEntity|LegalEntity|tempEntityNumber|"+tempEntityNumber);		
@@ -20,6 +27,12 @@ public class LegalEntity {
 		this.capitalAmount=tempCapitalAmount;
 		this.shareCount = tempShareCount;
 			
+		
+	}
+	
+	public void setEntityName(String tmpEntityName){
+		this.name = tmpEntityName.toUpperCase();
+	
 		
 	}
 	
