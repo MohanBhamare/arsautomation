@@ -17,7 +17,9 @@ public class AddLegalEntityIT {
 	@DataProvider(name = "LegalEnityTestData")
 	public Object[][] generateTestData() {
 		System.out.println("AddLegalEntityIT|generateTestData");
-		Object[][] legalEntityArray = { { "EN11026", "N-1026", 11026, 1026 }
+		Object[][] legalEntityArray = { 
+				{ "EN11026", "N-1026", 11026, 1026 },
+				{ "EN11027" , "N-1027", 1027,  27}
 
 		};
 
@@ -31,7 +33,6 @@ public class AddLegalEntityIT {
 
 	@Test
 	public void dummyIT() {
-
 		System.out.println("AddLegalEntityIT|dummyIT|Inegration Test Add legal entity");
 
 	}
