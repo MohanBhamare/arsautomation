@@ -6,11 +6,18 @@ import com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject;
 import com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject;
 import com.sumdev.tax.ars.auto.po.ConfirmationPageObject;
 import com.sumdev.tax.ars.arsauto.vo.LegalEntity;
+import com.opencsv.CSVReader;
 import com.sumdev.tax.ars.arsauto.repo.ILegalEntityRepository;
 import com.sumdev.tax.ars.arsauto.repo.LegalEntityOracleRepository;
 import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
+
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.testng.Assert;
+
 
 public class AddLegalEntityIT {
 
@@ -23,9 +30,33 @@ public class AddLegalEntityIT {
 
 		};
 
-		return legalEntityArray;
+				return legalEntityArray;
 	}
+   
+	@DataProvider (name = "LegalEntityCSVTestData")
+	public Object[][] readTestDataFromCSV(){
+		System.out.println(" AddLegalEntityIT|readTestDataFromCSV|");
+		List<String[]> rowlist = null;
+		List<Object[]> result = new ArrayList<Object[]>(); 
+		
+		try {
+			CSVReader reader = new CSVReader(new FileReader("ars-test-data.csv"));
+			rowlist = reader.readAll();
+			System.out.println(" AddLegalEntityIT|readTestDataFromCSV|rowlist|"+rowlist);
+		} catch (Exception e) {
+		
+			System.out.println("AddLegalEntityIT|readTestDataFromCSV|" + e);
+			e.printStackTrace();
+		}
+		
+		String[][] dataArr = new String[rowlist.size()][];
+		dataArr = rowlist.toArray(dataArr);
+		return  dataArr;
 
+		
+	}
+	
+	
 	public void setup() {
 		System.out.println("AddLegalEntityIT|setup|");
 
@@ -36,9 +67,11 @@ public class AddLegalEntityIT {
 		System.out.println("AddLegalEntityIT|dummyIT|Inegration Test Add legal entity");
 
 	}
-
-	@Test(dataProvider = "LegalEnityTestData")
-	public void verifyLEAdditon(String tmpEntityNumber, String tmpName, int tmpCapitalAmount, int tmpShareCount) {
+	
+	
+	//@Test(dataProvider = "LegalEnityTestData")
+	@Test(dataProvider = "LegalEntityCSVTestData")
+	public void verifyLEAdditon(String tmpEntityNumber, String tmpName, String tmpCapitalAmount, String tmpShareCount) {
 		System.out.println("AddLegalEntityIT|verifyLEAdditon|");
 
 		// Go To Login page : http://localhost:9090/admin)
@@ -57,7 +90,11 @@ public class AddLegalEntityIT {
 		CreateLegalEntityPageObject clepo = lelpo.navigateToCreateNewPage();
 		System.out.println("AddLegalEntityIT|verifyLEAdditon|clepo|" + clepo);
 
-		LegalEntity expectedle = new LegalEntity(tmpEntityNumber, tmpName, tmpCapitalAmount, tmpShareCount);
+		int localCapitalAmount = Integer.parseInt(tmpCapitalAmount);
+		int localShareCount  = Integer.parseInt(tmpShareCount);
+		
+			
+		LegalEntity expectedle = new LegalEntity(tmpEntityNumber, tmpName, localCapitalAmount, localShareCount);
 		clepo.addNewLegalEntity(expectedle);
 		System.out.println("AddLegalEntityIT|verifyLEAdditon|Compare|***************");
 		// JDBC / Database
@@ -75,6 +112,8 @@ public class AddLegalEntityIT {
 		Assert.assertEquals(result, true);
 
 	}
+	
+	
 
 	private boolean compare(LegalEntity observedle, LegalEntity expectedle) {
 		System.out.println("AddLegalEntityIT|verifyLEAdditon|compare|");
@@ -106,9 +145,9 @@ public class AddLegalEntityIT {
 		System.out.println("AddLegalEntityIT|Main|");
 
 		String tempEntityNumber = "EN-101051";
-		int tempCapitalAmount = 10051;
+		String tempCapitalAmount = "10051";
 		String tempName = "NAME-101051";
-		int tempShareCount = 51;
+	    String tempShareCount = "51";
 
 		AddLegalEntityIT addle = new AddLegalEntityIT();
 		addle.setup();

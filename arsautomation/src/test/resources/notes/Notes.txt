@@ -135,7 +135,7 @@ TC01:
 6. System will navigate user to 'LegalEntities' List page
 7. User Clicks on 'Crete New' button/Link
 8. System will navigate user to 'Create LegalEntity' Page
-9. Provide following information for Legal Entity and Click on 'Save' Button
+9. Provide following information for Legal Entity and Click on 'Save' Button/Read from the .CSV file
 	9a. EntityNumber:EN1032
 	9b. CapitalAmount: 1032
 	9c. Name: N-1032

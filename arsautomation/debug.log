@@ -26,7 +26,7 @@
 Running TestSuite
 HelloTestNG|dummyTest|
 HelloTestNG|dummyTest2|
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.147 sec - in TestSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.434 sec - in TestSuite
 
 Results :
 
@@ -42,34 +42,71 @@ Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 -------------------------------------------------------
 Running TestSuite
 AddLegalEntityIT|dummyIT|Inegration Test Add legal entity
-AddLegalEntityIT|generateTestData
+ AddLegalEntityIT|readTestDataFromCSV|
+ AddLegalEntityIT|readTestDataFromCSV|rowlist|[[Ljava.lang.String;@4cb2c100, [Ljava.lang.String;@6fb554cc, [Ljava.lang.String;@614c5515, [Ljava.lang.String;@77b52d12]
 AddLegalEntityIT|verifyLEAdditon|
 LoginPageObject|login|
 LoginPageObject|login|userID|admin
 LoginPageObject|login|password|admin
-LoginPageObject|login|dashpo|com.sumdev.tax.ars.auto.po.DashboardPageObject@180bc464
-AddLegalEntityIT|verifyLEAdditon|utdepo|com.sumdev.tax.ars.auto.po.DashboardPageObject@180bc464
-DashboardPageObject|navigateToLegalEntityList|com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject@1324409e
-AddLegalEntityIT|verifyLEAdditon|lelpo|com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject@1324409e
+LoginPageObject|login|dashpo|com.sumdev.tax.ars.auto.po.DashboardPageObject@2d554825
+AddLegalEntityIT|verifyLEAdditon|utdepo|com.sumdev.tax.ars.auto.po.DashboardPageObject@2d554825
+DashboardPageObject|navigateToLegalEntityList|com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject@68837a77
+AddLegalEntityIT|verifyLEAdditon|lelpo|com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject@68837a77
 LegalEntitiesListPageObject|navigateToCreateNewPage|
-LegalEntitiesListPageObject|navigateToCreateNewPage|CreateLegalEntityPageObject|com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject@2c6a3f77
-AddLegalEntityIT|verifyLEAdditon|clepo|com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject@2c6a3f77
+LegalEntitiesListPageObject|navigateToCreateNewPage|CreateLegalEntityPageObject|com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject@6be46e8f
+AddLegalEntityIT|verifyLEAdditon|clepo|com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject@6be46e8f
 LegalEntity|LegalEntity
 LegalEntity|LegalEntity|tempEntityNumber|EN11026
 LegalEntity|LegalEntity|tempCapitalAmount|11026
 LegalEntity|LegalEntity|tempName|N-1026
 LegalEntity|LegalEntity|tempShareCount|1026
 CreateLegalEntityPageObject|addNewLegalEntity|
-CreateLegalEntityPageObject|addNewLegalEntity|confpo|com.sumdev.tax.ars.auto.po.ConfirmationPageObject@246ae04d
+CreateLegalEntityPageObject|addNewLegalEntity|confpo|com.sumdev.tax.ars.auto.po.ConfirmationPageObject@3567135c
 AddLegalEntityIT|verifyLEAdditon|Compare|***************
 LegalEntityOracleRepositor|openRepository|b4 try
 LegalEntityOracleRepositor|openRepository
-LegalEntityOracleRepository|OpenRepositoty|Connection|oracle.jdbc.driver.T4CConnection@2038ae61
+LegalEntityOracleRepository|OpenRepositoty|Connection|oracle.jdbc.driver.T4CConnection@4fe3c938
 LegalEntityOracleRepositor|
 LegalEntityOracleRepositor|findByID|
 LegalEntityOracleRepositor|findByID|tmpEntityID|EN11026
+LegalEntityOracleRepositor|findByID|selectQuery|select entity_number,capital_amount,name,Share_count from legal_entity where Entity_number='EN11026'
+LegalEntityOracleRepositor|findByID|ResultSet|oracle.jdbc.driver.OracleResultSetImpl@6c7a164b
+LegalEntityOracleRepositor|findByID|ResultSet|EntityNumber|EN11026|Capital Amount|11026|LegalEntityName|N-1026|Share Count|1026
+LegalEntity|LegalEntity
+LegalEntity|LegalEntity|tempEntityNumber|EN11026
+LegalEntity|LegalEntity|tempCapitalAmount|11026
+LegalEntity|LegalEntity|tempName|N-1026
+LegalEntity|LegalEntity|tempShareCount|1026
+AddLegalEntityIT|verifyLEAdditon|compare|
+AddLegalEntityIT|verifyLEAdditon|compare|equalFlag|true
+AddLegalEntityIT|verifyLEAdditon|Compare|*******true
+AddLegalEntityIT|verifyLEAdditon|
+LoginPageObject|login|
+LoginPageObject|login|userID|admin
+LoginPageObject|login|password|admin
+LoginPageObject|login|dashpo|com.sumdev.tax.ars.auto.po.DashboardPageObject@7283d3eb
+AddLegalEntityIT|verifyLEAdditon|utdepo|com.sumdev.tax.ars.auto.po.DashboardPageObject@7283d3eb
+DashboardPageObject|navigateToLegalEntityList|com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject@638ef7ed
+AddLegalEntityIT|verifyLEAdditon|lelpo|com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject@638ef7ed
+LegalEntitiesListPageObject|navigateToCreateNewPage|
+LegalEntitiesListPageObject|navigateToCreateNewPage|CreateLegalEntityPageObject|com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject@4bff7da0
+AddLegalEntityIT|verifyLEAdditon|clepo|com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject@4bff7da0
+LegalEntity|LegalEntity
+LegalEntity|LegalEntity|tempEntityNumber|EN11027
+LegalEntity|LegalEntity|tempCapitalAmount|11027
+LegalEntity|LegalEntity|tempName|N-1027
+LegalEntity|LegalEntity|tempShareCount|1027
+CreateLegalEntityPageObject|addNewLegalEntity|
+CreateLegalEntityPageObject|addNewLegalEntity|confpo|com.sumdev.tax.ars.auto.po.ConfirmationPageObject@3f1d2e23
+AddLegalEntityIT|verifyLEAdditon|Compare|***************
+LegalEntityOracleRepositor|openRepository|b4 try
+LegalEntityOracleRepositor|openRepository
+LegalEntityOracleRepository|OpenRepositoty|Connection|oracle.jdbc.driver.T4CConnection@536dbea0
+LegalEntityOracleRepositor|
+LegalEntityOracleRepositor|findByID|
+LegalEntityOracleRepositor|findByID|tmpEntityID|EN11027
 LegalEntityOracleRepositor|findByID|selectQuery|select entity_number,capital_amount,name,Share_count from legal_entity where Entity_number='EN11027'
-LegalEntityOracleRepositor|findByID|ResultSet|oracle.jdbc.driver.OracleResultSetImpl@4e0ae11f
+LegalEntityOracleRepositor|findByID|ResultSet|oracle.jdbc.driver.OracleResultSetImpl@47c81abf
 LegalEntityOracleRepositor|findByID|ResultSet|EntityNumber|EN11027|Capital Amount|11027|LegalEntityName|N-1027|Share Count|1027
 LegalEntity|LegalEntity
 LegalEntity|LegalEntity|tempEntityNumber|EN11027
@@ -77,38 +114,94 @@ LegalEntity|LegalEntity|tempCapitalAmount|11027
 LegalEntity|LegalEntity|tempName|N-1027
 LegalEntity|LegalEntity|tempShareCount|1027
 AddLegalEntityIT|verifyLEAdditon|compare|
-AddLegalEntityIT|verifyLEAdditon|Compare|*******false
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.804 sec <<< FAILURE! - in TestSuite
-verifyLEAdditon(com.sumdev.tax.ars.auto.it.AddLegalEntityIT)  Time elapsed: 0.828 sec  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at com.sumdev.tax.ars.auto.it.AddLegalEntityIT.verifyLEAdditon(AddLegalEntityIT.java:78)
-
+AddLegalEntityIT|verifyLEAdditon|compare|equalFlag|true
+AddLegalEntityIT|verifyLEAdditon|Compare|*******true
+AddLegalEntityIT|verifyLEAdditon|
+LoginPageObject|login|
+LoginPageObject|login|userID|admin
+LoginPageObject|login|password|admin
+LoginPageObject|login|dashpo|com.sumdev.tax.ars.auto.po.DashboardPageObject@21d03963
+AddLegalEntityIT|verifyLEAdditon|utdepo|com.sumdev.tax.ars.auto.po.DashboardPageObject@21d03963
+DashboardPageObject|navigateToLegalEntityList|com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject@1f760b47
+AddLegalEntityIT|verifyLEAdditon|lelpo|com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject@1f760b47
+LegalEntitiesListPageObject|navigateToCreateNewPage|
+LegalEntitiesListPageObject|navigateToCreateNewPage|CreateLegalEntityPageObject|com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject@18ece7f4
+AddLegalEntityIT|verifyLEAdditon|clepo|com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject@18ece7f4
+LegalEntity|LegalEntity
+LegalEntity|LegalEntity|tempEntityNumber|EN1031
+LegalEntity|LegalEntity|tempCapitalAmount|1031
+LegalEntity|LegalEntity|tempName|N-1031
+LegalEntity|LegalEntity|tempShareCount|31
+CreateLegalEntityPageObject|addNewLegalEntity|
+CreateLegalEntityPageObject|addNewLegalEntity|confpo|com.sumdev.tax.ars.auto.po.ConfirmationPageObject@3cce57c7
+AddLegalEntityIT|verifyLEAdditon|Compare|***************
+LegalEntityOracleRepositor|openRepository|b4 try
+LegalEntityOracleRepositor|openRepository
+LegalEntityOracleRepository|OpenRepositoty|Connection|oracle.jdbc.driver.T4CConnection@1cf56a1c
+LegalEntityOracleRepositor|
+LegalEntityOracleRepositor|findByID|
+LegalEntityOracleRepositor|findByID|tmpEntityID|EN1031
+LegalEntityOracleRepositor|findByID|selectQuery|select entity_number,capital_amount,name,Share_count from legal_entity where Entity_number='EN1031'
+LegalEntityOracleRepositor|findByID|ResultSet|oracle.jdbc.driver.OracleResultSetImpl@33f676f6
+LegalEntityOracleRepositor|findByID|ResultSet|EntityNumber|EN1031|Capital Amount|1031|LegalEntityName|N-1031|Share Count|31
+LegalEntity|LegalEntity
+LegalEntity|LegalEntity|tempEntityNumber|EN1031
+LegalEntity|LegalEntity|tempCapitalAmount|1031
+LegalEntity|LegalEntity|tempName|N-1031
+LegalEntity|LegalEntity|tempShareCount|31
+AddLegalEntityIT|verifyLEAdditon|compare|
+AddLegalEntityIT|verifyLEAdditon|compare|equalFlag|true
+AddLegalEntityIT|verifyLEAdditon|Compare|*******true
+AddLegalEntityIT|verifyLEAdditon|
+LoginPageObject|login|
+LoginPageObject|login|userID|admin
+LoginPageObject|login|password|admin
+LoginPageObject|login|dashpo|com.sumdev.tax.ars.auto.po.DashboardPageObject@264f218
+AddLegalEntityIT|verifyLEAdditon|utdepo|com.sumdev.tax.ars.auto.po.DashboardPageObject@264f218
+DashboardPageObject|navigateToLegalEntityList|com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject@3576ddc2
+AddLegalEntityIT|verifyLEAdditon|lelpo|com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject@3576ddc2
+LegalEntitiesListPageObject|navigateToCreateNewPage|
+LegalEntitiesListPageObject|navigateToCreateNewPage|CreateLegalEntityPageObject|com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject@35b74c5c
+AddLegalEntityIT|verifyLEAdditon|clepo|com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject@35b74c5c
+LegalEntity|LegalEntity
+LegalEntity|LegalEntity|tempEntityNumber|EN1032
+LegalEntity|LegalEntity|tempCapitalAmount|1032
+LegalEntity|LegalEntity|tempName|N-1032
+LegalEntity|LegalEntity|tempShareCount|32
+CreateLegalEntityPageObject|addNewLegalEntity|
+CreateLegalEntityPageObject|addNewLegalEntity|confpo|com.sumdev.tax.ars.auto.po.ConfirmationPageObject@2e570ded
+AddLegalEntityIT|verifyLEAdditon|Compare|***************
+LegalEntityOracleRepositor|openRepository|b4 try
+LegalEntityOracleRepositor|openRepository
+LegalEntityOracleRepository|OpenRepositoty|Connection|oracle.jdbc.driver.T4CConnection@b86de0d
+LegalEntityOracleRepositor|
+LegalEntityOracleRepositor|findByID|
+LegalEntityOracleRepositor|findByID|tmpEntityID|EN1032
+LegalEntityOracleRepositor|findByID|selectQuery|select entity_number,capital_amount,name,Share_count from legal_entity where Entity_number='EN1032'
+LegalEntityOracleRepositor|findByID|ResultSet|oracle.jdbc.driver.OracleResultSetImpl@81d9a72
+LegalEntityOracleRepositor|findByID|ResultSet|EntityNumber|EN1032|Capital Amount|1032|LegalEntityName|N-1032|Share Count|32
+LegalEntity|LegalEntity
+LegalEntity|LegalEntity|tempEntityNumber|EN1032
+LegalEntity|LegalEntity|tempCapitalAmount|1032
+LegalEntity|LegalEntity|tempName|N-1032
+LegalEntity|LegalEntity|tempShareCount|32
+AddLegalEntityIT|verifyLEAdditon|compare|
+AddLegalEntityIT|verifyLEAdditon|compare|equalFlag|true
+AddLegalEntityIT|verifyLEAdditon|Compare|*******true
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.732 sec - in TestSuite
 
 Results :
 
-Failed tests: 
-  AddLegalEntityIT.verifyLEAdditon:78 expected [true] but found [false]
-
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
 
 [WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent! The file encoding for reports output files should be provided by the POM property ${project.reporting.outputEncoding}.
 [INFO] 
 [INFO] --- maven-failsafe-plugin:2.19.1:verify (default) @ arsautomation ---
 [WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent! The file encoding for reports output files should be provided by the POM property ${project.reporting.outputEncoding}.
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 9.021 s
-[INFO] Finished at: 2017-03-25T22:29:48+05:30
-[INFO] Final Memory: 10M/130M
+[INFO] Total time: 9.502 s
+[INFO] Finished at: 2017-03-26T00:43:59+05:30
+[INFO] Final Memory: 11M/166M
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-failsafe-plugin:2.19.1:verify (default) on project arsautomation: There are test failures.
-[ERROR] 
-[ERROR] Please refer to C:\root\ey\arsautomation\target\failsafe-reports for the individual test results.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
