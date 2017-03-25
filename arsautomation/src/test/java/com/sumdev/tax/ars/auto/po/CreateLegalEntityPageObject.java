@@ -4,7 +4,9 @@ import com.sumdev.tax.ars.arsauto.vo.LegalEntity;
 public class CreateLegalEntityPageObject {
 	
 	public ConfirmationPageObject addNewLegalEntity(LegalEntity le){
+		System.out.println("CreateLegalEntityPageObject|addNewLegalEntity|");
 		ConfirmationPageObject confpo = new ConfirmationPageObject();
+		System.out.println("CreateLegalEntityPageObject|addNewLegalEntity|confpo|"+confpo);
 		return confpo;
 		
 		

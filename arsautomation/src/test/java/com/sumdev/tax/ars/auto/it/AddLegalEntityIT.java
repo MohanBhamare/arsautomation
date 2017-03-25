@@ -1,4 +1,4 @@
-package com.sumdev.tax.ars.auto.ut;
+package com.sumdev.tax.ars.auto.it;
 import com.sumdev.tax.ars.auto.po.LoginPageObject;
 import com.sumdev.tax.ars.auto.po.DashboardPageObject;
 import com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject;
@@ -8,17 +8,17 @@ import com.sumdev.tax.ars.arsauto.vo.LegalEntity;
 import com.sumdev.tax.ars.arsauto.repo.ILegalEntityRepository;
 import com.sumdev.tax.ars.arsauto.repo.LegalEntityOracleRepository;
 
-public class AddLegalEntityUT {
+public class AddLegalEntityIT {
 	
 	public void setup() {
-		 System.out.println("AddLegalEntityUT|setup|");
+		 System.out.println("AddLegalEntityIT|setup|");
 		
 	}
 	
 	
 	
 	public void verifyLEAdditon(String tmpEntityNumber, String tmpName, int tmpCapitalAmount,  int tmpShareCount) {
-		 System.out.println("AddLegalEntityUT|verifyLEAdditon|");
+		 System.out.println("AddLegalEntityIT|verifyLEAdditon|");
 		 
 		 //Go To Login page : http://localhost:9090/admin)
 		 LoginPageObject loginpo = new LoginPageObject();
@@ -28,17 +28,17 @@ public class AddLegalEntityUT {
 		 //and Click on 'Log Me In' button
 		 //System will allow user to login to the system, will show dashboard page.
 		  DashboardPageObject utdepo =   loginpo.login("admin", "admin");
-		  System.out.println("AddLegalEntityUT|verifyLEAdditon|utdepo|"+utdepo);
+		  System.out.println("AddLegalEntityIT|verifyLEAdditon|utdepo|"+utdepo);
 		 
 		  LegalEntitiesListPageObject lelpo = utdepo.navigateToLegalEntityList();
-		  System.out.println("AddLegalEntityUT|verifyLEAdditon|lelpo|"+lelpo);
+		  System.out.println("AddLegalEntityIT|verifyLEAdditon|lelpo|"+lelpo);
 		  
 		  CreateLegalEntityPageObject clepo = lelpo.navigateToCreateNewPage();
-		  System.out.println("AddLegalEntityUT|verifyLEAdditon|clepo|"+clepo);
+		  System.out.println("AddLegalEntityIT|verifyLEAdditon|clepo|"+clepo);
 		
 	      LegalEntity expectedle = new LegalEntity(tmpEntityNumber,tmpName,tmpCapitalAmount, tmpShareCount);
 	      clepo.addNewLegalEntity(expectedle);
-	      System.out.println("AddLegalEntityUT|verifyLEAdditon|Compare|***************");
+	      System.out.println("AddLegalEntityIT|verifyLEAdditon|Compare|***************");
 	      //JDBC / Database
 	      ILegalEntityRepository lerepo = new LegalEntityOracleRepository();
 	      lerepo.open();
@@ -47,13 +47,13 @@ public class AddLegalEntityUT {
 	     
 	     // Compare , Observed and verify
 	     boolean result = compare(observedle, expectedle);
-	     System.out.println("AddLegalEntityUT|verifyLEAdditon|Compare|*******"+result);
+	     System.out.println("AddLegalEntityIT|verifyLEAdditon|Compare|*******"+result);
 	     
 		
 	}
 
 	private boolean compare(LegalEntity observedle, LegalEntity expectedle ){
-		  System.out.println("AddLegalEntityUT|verifyLEAdditon|compare|");
+		  System.out.println("AddLegalEntityIT|verifyLEAdditon|compare|");
 		  
 		  boolean equalFlag = false;
 		  
@@ -72,7 +72,7 @@ public class AddLegalEntityUT {
 	}
 	
 	public void cleanup() {
-		 //System.out.println("AddLegalEntityIT|cleanup|");
+		 //System.out.println("AddLegalEntityUT|cleanup|");
 		
 	}
 	
@@ -88,7 +88,7 @@ public class AddLegalEntityUT {
 	      String tempName = "NAME-101051";
 	      int tempShareCount = 51;
 	      
-		 AddLegalEntityUT addle = new AddLegalEntityUT();
+		 AddLegalEntityIT addle = new AddLegalEntityIT();
 		 addle.setup();
 		 addle.verifyLEAdditon(tempEntityNumber,tempName, tempCapitalAmount, tempShareCount);
 		 addle.cleanup();

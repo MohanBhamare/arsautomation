@@ -88,6 +88,18 @@ PAGE OBJECT MODEL: Manual testing:
 eclipse: debuging
 Gradle?
 CUCUMBER?
+
+
+Home work: 
+
+1. Java learn by Byte: 
+2. Maven : Jason (POM.xml)
+3. git (Low priority)
+4. testNG tutorials
+5. selenium pdf (book), possibly purchase it
+6. TestNG: 
+
+
 ========================================================================================
 Json:
 
@@ -139,7 +151,7 @@ TC01:
 16. Close the browser.
 
 =========================================================================================
-
+expectedLE
 =============================================XML========================================
 
 

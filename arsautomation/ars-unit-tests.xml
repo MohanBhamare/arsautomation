@@ -1,0 +1,21 @@
+<suite name="ARSLabSuite"  verbose="1" >
+
+	
+   
+
+
+  <test name="TC1DummyTest">
+	<classes>
+		<class name="com.sumdev.tax.ars.auto.ut.HelloTestNG" />
+	</classes>
+  </test>
+ 
+	
+	
+   
+   
+   
+   
+  
+</suite>
+
