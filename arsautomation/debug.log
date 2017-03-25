@@ -1,0 +1,114 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building arsautomation 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ arsautomation ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\root\ey\arsautomation\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ arsautomation ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ arsautomation ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 7 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ arsautomation ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ arsautomation ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+HelloTestNG|dummyTest|
+HelloTestNG|dummyTest2|
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.147 sec - in TestSuite
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ arsautomation ---
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.19.1:integration-test (default) @ arsautomation ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+AddLegalEntityIT|dummyIT|Inegration Test Add legal entity
+AddLegalEntityIT|generateTestData
+AddLegalEntityIT|verifyLEAdditon|
+LoginPageObject|login|
+LoginPageObject|login|userID|admin
+LoginPageObject|login|password|admin
+LoginPageObject|login|dashpo|com.sumdev.tax.ars.auto.po.DashboardPageObject@180bc464
+AddLegalEntityIT|verifyLEAdditon|utdepo|com.sumdev.tax.ars.auto.po.DashboardPageObject@180bc464
+DashboardPageObject|navigateToLegalEntityList|com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject@1324409e
+AddLegalEntityIT|verifyLEAdditon|lelpo|com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject@1324409e
+LegalEntitiesListPageObject|navigateToCreateNewPage|
+LegalEntitiesListPageObject|navigateToCreateNewPage|CreateLegalEntityPageObject|com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject@2c6a3f77
+AddLegalEntityIT|verifyLEAdditon|clepo|com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject@2c6a3f77
+LegalEntity|LegalEntity
+LegalEntity|LegalEntity|tempEntityNumber|EN11026
+LegalEntity|LegalEntity|tempCapitalAmount|11026
+LegalEntity|LegalEntity|tempName|N-1026
+LegalEntity|LegalEntity|tempShareCount|1026
+CreateLegalEntityPageObject|addNewLegalEntity|
+CreateLegalEntityPageObject|addNewLegalEntity|confpo|com.sumdev.tax.ars.auto.po.ConfirmationPageObject@246ae04d
+AddLegalEntityIT|verifyLEAdditon|Compare|***************
+LegalEntityOracleRepositor|openRepository|b4 try
+LegalEntityOracleRepositor|openRepository
+LegalEntityOracleRepository|OpenRepositoty|Connection|oracle.jdbc.driver.T4CConnection@2038ae61
+LegalEntityOracleRepositor|
+LegalEntityOracleRepositor|findByID|
+LegalEntityOracleRepositor|findByID|tmpEntityID|EN11026
+LegalEntityOracleRepositor|findByID|selectQuery|select entity_number,capital_amount,name,Share_count from legal_entity where Entity_number='EN11027'
+LegalEntityOracleRepositor|findByID|ResultSet|oracle.jdbc.driver.OracleResultSetImpl@4e0ae11f
+LegalEntityOracleRepositor|findByID|ResultSet|EntityNumber|EN11027|Capital Amount|11027|LegalEntityName|N-1027|Share Count|1027
+LegalEntity|LegalEntity
+LegalEntity|LegalEntity|tempEntityNumber|EN11027
+LegalEntity|LegalEntity|tempCapitalAmount|11027
+LegalEntity|LegalEntity|tempName|N-1027
+LegalEntity|LegalEntity|tempShareCount|1027
+AddLegalEntityIT|verifyLEAdditon|compare|
+AddLegalEntityIT|verifyLEAdditon|Compare|*******false
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.804 sec <<< FAILURE! - in TestSuite
+verifyLEAdditon(com.sumdev.tax.ars.auto.it.AddLegalEntityIT)  Time elapsed: 0.828 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at com.sumdev.tax.ars.auto.it.AddLegalEntityIT.verifyLEAdditon(AddLegalEntityIT.java:78)
+
+
+Results :
+
+Failed tests: 
+  AddLegalEntityIT.verifyLEAdditon:78 expected [true] but found [false]
+
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent! The file encoding for reports output files should be provided by the POM property ${project.reporting.outputEncoding}.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.19.1:verify (default) @ arsautomation ---
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent! The file encoding for reports output files should be provided by the POM property ${project.reporting.outputEncoding}.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 9.021 s
+[INFO] Finished at: 2017-03-25T22:29:48+05:30
+[INFO] Final Memory: 10M/130M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-failsafe-plugin:2.19.1:verify (default) on project arsautomation: There are test failures.
+[ERROR] 
+[ERROR] Please refer to C:\root\ey\arsautomation\target\failsafe-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

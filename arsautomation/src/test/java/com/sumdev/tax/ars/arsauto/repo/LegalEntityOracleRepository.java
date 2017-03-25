@@ -85,7 +85,8 @@ public class LegalEntityOracleRepository implements ILegalEntityRepository {
 		
 		try {
 			Statement st = conn.createStatement();
-			String selectQuery = "select entity_number,capital_amount,name,Share_count from legal_entity where Entity_number='EN11027'";
+			String selectQuery = "select entity_number,capital_amount,name,Share_count from legal_entity " 
+			+ "where Entity_number='" + tmpEntityId + "'";
 			System.out.println("LegalEntityOracleRepositor|findByID|selectQuery|"+selectQuery);
 			
 			ResultSet rs = st.executeQuery(selectQuery);

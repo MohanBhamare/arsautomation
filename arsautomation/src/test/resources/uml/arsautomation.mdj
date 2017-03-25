@@ -1902,6 +1902,20 @@
 													"concurrency": "sequential",
 													"isQuery": false,
 													"isAbstract": false
+												},
+												{
+													"_type": "UMLOperation",
+													"_id": "AAAAAAFbBjKZO+ykvYI=",
+													"_parent": {
+														"$ref": "AAAAAAFbBFPxxiotqJU="
+													},
+													"name": "Operation1",
+													"visibility": "public",
+													"isStatic": false,
+													"isLeaf": false,
+													"concurrency": "sequential",
+													"isQuery": false,
+													"isAbstract": false
 												}
 											],
 											"isAbstract": false,

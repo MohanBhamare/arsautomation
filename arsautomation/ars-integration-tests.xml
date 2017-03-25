@@ -1,9 +1,9 @@
 <suite name="ARSLabSuite"  verbose="1" >
 
 
-  <test name="TC1DummyTest">
+  <test name="TC-IT-01-Add-Legal-Entity">
 	<classes>
-		<class name="com.sumdev.tax.ars.auto.ut.HelloTestNG" />
+		<class name="com.sumdev.tax.ars.auto.it.AddLegalEntityIT" />
 	</classes>
   </test>
  
