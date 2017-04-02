@@ -32,7 +32,9 @@ public class LoginPageObject extends LoadableComponent<LoginPageObject>{
 		System.out.println("LoginPageObject|LoginPageObject|driver|"+driver);
 	    driver = DriverFactory.getDriver();
 	    System.out.println("LoginPageObject|LoginPageObject|driver|"+driver);
-	       
+	   // PageFactory.initElements(driver, this);
+	//	System.out.println("LoginPageObject|LoginPageObject|$PF.initElements|inputTextUserName|"+inputTextUserName.getAttribute("name"));
+		  
 	    
 	}
 
@@ -40,8 +42,9 @@ public class LoginPageObject extends LoadableComponent<LoginPageObject>{
 
 		System.out.println("LoginPageObject|login|");
 		System.out.println("LoginPageObject|login|userID|" + userID);
-		
+		System.out.println("LoginPageObject|login|inputTextUserName|" + inputTextUserName);
 		inputTextUserName.sendKeys("");
+		
 		inputTextUserName.sendKeys(userID);
 		
 		System.out.println("LoginPageObject|login|password|" + password);
@@ -72,7 +75,8 @@ public class LoginPageObject extends LoadableComponent<LoginPageObject>{
 		System.out.println("LoginPageObject|load|");
 		driver.get(pageURL);
 		PageFactory.initElements(driver, this);
-	    System.out.println("LoginPageObject|load|$PF.initElements|inputTextUserName|"+inputTextUserName.getAttribute("name"));
+	  
+		System.out.println("LoginPageObject|load|$PF.initElements|inputTextUserName|"+inputTextUserName.getAttribute("name"));
 	    System.out.println("LoginPageObject|load|$PF.initElements|inputPasswordPWD|"+inputPasswordPWD.getAttribute("id"));
 	    System.out.println("LoginPageObject|load|$PF.initElements|inputSubmitSignIn|"+inputSubmitSignIn.getAttribute("id"));
 		    

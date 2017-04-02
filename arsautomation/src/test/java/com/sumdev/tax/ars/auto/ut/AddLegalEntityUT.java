@@ -22,14 +22,14 @@ public class AddLegalEntityUT {
 		 
 		 //Go To Login page : http://localhost:9090/admin)
 		 LoginPageObject loginpo = new LoginPageObject();
-		 
+		 loginpo.get();
 		 
 		 //Provide ARS Login credenitials (Username : admin , Password:admin)
 		 //and Click on 'Log Me In' button
 		 //System will allow user to login to the system, will show dashboard page.
 		  DashboardPageObject utdepo =   loginpo.login("admin", "admin");
 		  System.out.println("AddLegalEntityUT|verifyLEAdditon|utdepo|"+utdepo);
-		 
+		   utdepo.get();
 		  LegalEntitiesListPageObject lelpo = utdepo.navigateToLegalEntityList();
 		  System.out.println("AddLegalEntityUT|verifyLEAdditon|lelpo|"+lelpo);
 		  
