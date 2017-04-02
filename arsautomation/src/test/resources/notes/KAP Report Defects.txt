@@ -1,0 +1,5 @@
+P31: = BK9
+BK9: Income_SilentPartnerships<Capitalinvestments><period>
+
+CPVC_Income_Amount (Reporting Currency)_Domestic_NoSettlementTax<capital investments (including investment funds)> 
++ CPVC_Income - tax adjustment  - increase (+)/decrease (-)_Amount (Reporting Currency)_DomesticWHT<capital investments (including investment funds)>"

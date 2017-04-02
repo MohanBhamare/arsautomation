@@ -1,4 +1,5 @@
- entity_number ='EN11025'
- capital_amount = 1025
- name = N-1025
- Share_count = 1025
+50x35=1750
+35x3=  105
+-----------
+      1855
+------------

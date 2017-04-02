@@ -12,4 +12,9 @@ public class CreateLegalEntityPageObject {
 		
 	}
 
+	public void addNewLegalEntity(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

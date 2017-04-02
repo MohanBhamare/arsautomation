@@ -6,16 +6,18 @@ import com.sumdev.tax.ars.auto.po.LegalEntitiesListPageObject;
 import com.sumdev.tax.ars.auto.po.CreateLegalEntityPageObject;
 import com.sumdev.tax.ars.auto.po.ConfirmationPageObject;
 import com.sumdev.tax.ars.arsauto.vo.LegalEntity;
-import com.opencsv.CSVReader;
 import com.sumdev.tax.ars.arsauto.repo.ILegalEntityRepository;
 import com.sumdev.tax.ars.arsauto.repo.LegalEntityOracleRepository;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
-
+import com.opencsv.CSVReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.testng.Assert;
 
 
@@ -26,8 +28,8 @@ public class AddLegalEntityIT {
 		System.out.println("AddLegalEntityIT|generateTestData");
 		Object[][] legalEntityArray = { 
 				{ "EN11026", "N-1026", 11026, 1026 },
-				{ "EN11027" , "N-1027", 1027,  27}
-
+				{ "EN11027" , "N-1027", 1027,  27},
+				{ "EN11028" , "N-1028", 1028,  28}
 		};
 
 				return legalEntityArray;
@@ -62,15 +64,26 @@ public class AddLegalEntityIT {
 
 	}
 
-	@Test
+	@Test(enabled = true)
 	public void dummyIT() {
-		System.out.println("AddLegalEntityIT|dummyIT|Inegration Test Add legal entity");
-
+		System.out.println("AddLegalEntityIT|dummyIT|");
+		
+		LoginPageObject loginpo = new LoginPageObject();
+		System.out.println("AddLegalEntityIT|dummyIT|^loginpo.get()");
+		
+		loginpo.get();
+		System.out.println("AddLegalEntityIT|dummyIT|^loginpo.login()");
+		DashboardPageObject dpo = loginpo.login("admin", "admin");
+		System.out.println("AddLegalEntityIT|dummyIT|$loginpo.login()");
+		dpo.get();
+		dpo.navigateToLegalEntityList();
+	
+		
+		
 	}
-	
-	
-	//@Test(dataProvider = "LegalEnityTestData")
-	@Test(dataProvider = "LegalEntityCSVTestData")
+		
+
+	@Test(dataProvider = "LegalEntityCSVTestData", enabled = false)	
 	public void verifyLEAdditon(String tmpEntityNumber, String tmpName, String tmpCapitalAmount, String tmpShareCount) {
 		System.out.println("AddLegalEntityIT|verifyLEAdditon|");
 
@@ -84,12 +97,17 @@ public class AddLegalEntityIT {
 		DashboardPageObject utdepo = loginpo.login("admin", "admin");
 		System.out.println("AddLegalEntityIT|verifyLEAdditon|utdepo|" + utdepo);
 
+		utdepo.navigateToLegalEntityList();
+		
 		LegalEntitiesListPageObject lelpo = utdepo.navigateToLegalEntityList();
 		System.out.println("AddLegalEntityIT|verifyLEAdditon|lelpo|" + lelpo);
+		lelpo.navigateToCreateNewPage();
 
 		CreateLegalEntityPageObject clepo = lelpo.navigateToCreateNewPage();
 		System.out.println("AddLegalEntityIT|verifyLEAdditon|clepo|" + clepo);
-
+	  
+ 
+		
 		int localCapitalAmount = Integer.parseInt(tmpCapitalAmount);
 		int localShareCount  = Integer.parseInt(tmpShareCount);
 		
@@ -110,11 +128,8 @@ public class AddLegalEntityIT {
 		// If result is false then it means comparision failled i..e Assert that
 		// test case failed
 		Assert.assertEquals(result, true);
-
 	}
 	
-	
-
 	private boolean compare(LegalEntity observedle, LegalEntity expectedle) {
 		System.out.println("AddLegalEntityIT|verifyLEAdditon|compare|");
 
@@ -136,7 +151,7 @@ public class AddLegalEntityIT {
 	}
 
 	public void cleanup() {
-		// System.out.println("AddLegalEntityUT|cleanup|");
+		System.out.println("AddLegalEntityUT|cleanup|");
 
 	}
 
@@ -150,7 +165,7 @@ public class AddLegalEntityIT {
 	    String tempShareCount = "51";
 
 		AddLegalEntityIT addle = new AddLegalEntityIT();
-		addle.setup();
+		//addle.setup();
 		addle.verifyLEAdditon(tempEntityNumber, tempName, tempCapitalAmount, tempShareCount);
 		addle.cleanup();
 

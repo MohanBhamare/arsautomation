@@ -9,6 +9,10 @@ mvn archetype:generate -DgroupId=com.sumdev.tax.ars -DartifactId=arsautomation -
 // create project
 mvn archetype:generate -DgroupId=com.learnbybyte.lab -DartifactId=labexercise -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false 
 
+mvn archetype:generate -DgroupId=com.ey.glowetax -DartifactId=taxautomation -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+mvn archetype:generate -DgroupId=com.ey. -DartifactId=taxautomation -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
 
 ===========
 mvn test //Mvn executes unit OR integration tests
@@ -61,14 +65,27 @@ This creates db connection in memeory
    This step is similar to opening 'sql commander' in db visulizer.
 7. Write insert query (insert into legal_entity (entity_number,capital_amount,name,Share_count) values ('EN11021',1021,'N-1021',1021);)
 8. Execute the Insert Query (stmt.executeQuery(selectQuery);
-
-
-
-  
-
-
-
 pom.xml
+
+==========================================
+================seleniumframework==================
+
+Section 1: Maven
+
+Create an empty maven project
+Section 2. Create Page Object
+
+Section 2: Create Page Object
+
+
+Section 3: JDBC
+
+
+Setion 4: Unit test
+
+
+Section 5: Integration test
+
 
 
 
@@ -110,6 +127,10 @@ Home work:
 6. TestNG: ,
 7. Dictitonary : Assert, explain assert
 
+------------------------------------
+Co-Study
+1. CSS Selector: TO DO (Dada and we)
+2. xpath
 
 ========================================================================================
 Json:
@@ -123,7 +144,24 @@ Maps:
 
 
 
-=============================================================================================
+===============================================Selenium==============================================
+FindBy: FindByID
+Fin
+
+@FindBy(id="req1")
+@FindBy(name="j_username")
+@FindBy(css="validate[required]")
+@Findby(xpath="\")
+@FindBy(linkText="LegalEntities")
+@FindBy(partialLinkText="Legal")
+@FindBy(partialLinkText="Logout")
+@FindBy(linkText="Create New")
+
+inputTextUserName WebElement @FindBy(name="j_username")
+inputTextEntityNumber WebElement @FindBy(id="entityNumber")
+inputTextCapitalAmount WebElement 
+InputTextName
+==========================================================================================
 ============================================ManualTesting======================================
 Insert Legal entity:
 TC01: 
@@ -162,7 +200,7 @@ TC01:
 16. Close the browser.
 
 =========================================================================================
-expectedLE
+
 =============================================XML========================================
 
 
@@ -252,8 +290,32 @@ rerurn int
 
 
 ================================================
+Next steps:
+Selenium Page Objects:
 
-balance +=amount;
+1. HomePO :
+capabilities : navigate to TenantClientSelectionPO page
+
+2. TenantClientSelectionPO : 
+
+3. AssetListPO:
+
+4. CreateAssetPO
+
+5. CreateTransactionPO
+
+
+6. TransactionTypePo
+
+7.
+
+----------------------
+PageObject (navigation/Actual creation)
+Capabilities
+3. UserInput: 
+
+
+
 
 
 

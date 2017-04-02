@@ -1,0 +1,30 @@
+Chapter 1: Overview of all the chapters/topics, various input files/resources requird, Lab exercise, downloads zip file for
+          Lab exercise, Lab reviews, referances.
+          
+          Computer Setup
+          Udemy setup
+          
+          
+Chapter 2: Download Java JDK, Eclipse, set up first program, compile, interpret and execute
+
+	  Lab exercise
+
+Chapter 3: Introudction to Eclipse: Download, capabilities of Eclipse:, Maintaing file strcutre/creating projects, workspace, defining perspective
+           importing class files from other projets, linking/referring to it.
+           Debuggin, running, passing command line arguments
+           shortcuts
+           
+Chapter 4: Datatypes and Variables: Primitive data types: 
+	   Integers:Byte (1 byte), int(2 byte),short(4 byte),long (8 byte)
+	   Float: float, double4
+	   boolean: boolean
+	   char: char: 2 bytes
+	   ------------------
+	   fields: class variables
+	   variables: Method variables
+	   
+	   Char literals: example: 
+	   
+	   Local variable
+           Arrays:
+           
